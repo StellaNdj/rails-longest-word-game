@@ -1,10 +1,12 @@
+<div class="ms-5 mt-4 me-5">
 <h1>New Game</h1>
-<h2><%= @letters %></h2>
+<h2 class="badge bg-info text-dark text-capitalize"><%= @letters %></h2>
 <form action="score" method="post" data-turbo="false">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
   <%= hidden_field_tag :letters, @letters %>
-  <label for="">What is the longest word you can find?</label>
-  <input type="text" name="word" value="<%= params[:word] %>">
-  <input type="submit" value="Play!">
+  <label for="" class="form-label">What is the longest word you can find?</label>
+  <input type="text" name="word" value="<%= params[:word] %>" class="form-control d-inline-flex">
+  <input type="submit" value="Play!" class="d-inline-flex justify-content-center mt-1 btn btn-primary">
 </form>
+</div>
